@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  # root 'books#index'
+  root 'books#index'
 
-  get '/logout' =>
+  # get '/logout' =>
 
   resources :books
 
