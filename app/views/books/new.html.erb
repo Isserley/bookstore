@@ -1,5 +1,18 @@
 <h1>New Book</h1>
 
-<%= render 'form' %>
+<%= form_for(@book) do |f| %>
+
+<p>Title<br>
+<%= f.text_field :title %>
+</p>
+
+<p>Author<br>
+<%= f.text_field :author %>
+</p>
+
+
+<%= f.submit 'Add Book' %>
+
+<% end %>
 
 <%= link_to 'Back', books_path %>
