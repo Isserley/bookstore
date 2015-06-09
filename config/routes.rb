@@ -4,7 +4,15 @@ Rails.application.routes.draw do
 
   # get '/logout' =>
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
+
   resources :books
+  resources :users
 
   # rake routes
   #    Prefix Verb   URI Pattern               Controller#Action
