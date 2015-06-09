@@ -14,7 +14,11 @@
     <% @books.each do |book| %>
       <p><%= book.title %><br>
       <%= book.author %><br>
+      <%= link_to 'Show', book %><br>
+      <%= link_to 'Edit', edit_book_path(book) %><br>
+      <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %><br></p>
     <% end %>
+      <%= link_to 'Add new book', new_book_path %>
   </tbody>
 
 </table>
