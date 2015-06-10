@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
 
+  get '/admin' => 'admin/books#index'
+
   resources :books
   resources :users
 

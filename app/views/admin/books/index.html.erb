@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Books</h1>
+<h1>Books in stock</h1>
 
 <table class="table table-bordered">
 
@@ -9,7 +9,7 @@
       <th>Book</th>
       <th>Author</th>
       <th>Price</th>
-      <th>Edit</th>
+      <th>More info</th>
     </tr>
   </thead>
 
@@ -18,8 +18,9 @@
     <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
+        <td><%= book.price %></td>
         <td><%= link_to 'Show', book_path(book.id) %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Edit', books_path(book.id) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tbody>
