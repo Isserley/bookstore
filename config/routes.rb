@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+namespace :admin do
+
+  get "/" => 'base#index'
+  resources :books
+  end
+
   root 'books#index'
 
   # get '/logout' =>
@@ -11,7 +17,6 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
 
-  get '/admin' => 'admin/books#index'
 
   resources :books
   resources :users
